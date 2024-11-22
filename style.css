@@ -1,0 +1,429 @@
+header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 2em;
+    height: 3px;
+    background: #2802bf;
+    transition: transform 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #000000;
+}
+
+.sub-nav {
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.has-dropdown:hover .sub-nav {
+    display: block;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.913); 
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+.college-name{
+    color: #000000;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:25px;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+nav ul li {
+    position: relative;
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size:medium;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+    color: rgb(7, 10, 204);
+}
+
+.sub-nav {
+    display: none; 
+    position: absolute; 
+    left: 0;
+    background-color: rgb(7, 10, 204);
+    border-radius: 5px;
+    z-index: 2; 
+    width: 200px;
+}
+
+nav ul li:hover .sub-nav {
+    display: block;
+}
+
+.sub-nav li {
+    display: block; 
+    margin:0; 
+    padding: 10px;
+}
+
+.sub-nav li a {
+    padding:10px 20px; 
+    color: rgb(253, 253, 253);
+    text-decoration: none; 
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.sub-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+    color: #0b0b0b;
+    width: 100%; 
+}
+
+
+footer {
+    background-color: #004b87;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+        }
+        /* Footer */
+footer {
+    background-color: #004b87;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+
+/* Logo Section */
+.footer-logo img {
+    width: 20px; /* Further reduced the width */
+    height: auto;
+    margin-bottom: 0.3em;
+}
+
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    color: #f0f0f0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #b3d1f0;
+    text-decoration: underline;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 1em;
+    color: #b0c4de;
+    border-top: 1px solid #ffffff20;
+    padding-top: 1em;
+    width: 100%;
+}
+.contact-details, .social-media {
+    flex: 1 1 200px; /* Allows each section to take up space responsively */
+}
+
+/* Contact Section Styling */
+.contact-details h3, .social-media h3 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.contact-details dl {
+    margin-bottom: 20px;
+    
+    color: #ffffff;
+}
+
+.contact-details dt {
+    font-weight: bold;
+    
+    color: #ffffff;
+}
+
+.contact-details dd {
+    margin: 0 0 10px;
+    
+    color: #ffffff;
+}
+
+/* Social Media Section Styling */
+.social-media {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s;
+    border-radius: 10%;
+}
+
+.social-icon:hover {
+    border-radius: 50%;
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #f1efef;
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: white;
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1000;
+
+    }
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: black;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+    }
+
+    .hamburger::before { top: -8px; }
+    .hamburger::after { bottom: -8px; }
+
+
+
+    .nav {
+        position: fixed;
+        background:rgb(10, 47, 212);
+        width: 80%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s;
+        z-index: 999;
+        overflow-y: auto; 
+
+    }
+    nav ul {
+        flex-direction: column;
+        padding: 20px 0 0 0; /* Removed left and right padding */
+        margin: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add a subtle border between items */
+    }
+
+    nav ul li a:hover {
+        background-color: white; /* Subtle background change on hover */
+        color: orange;
+    }
+
+    .sub-nav {
+        position: static;
+        background-color:orange; /* Slightly transparent background */
+        width: 100%;
+        display: none;
+    }
+
+    .sub-nav li {
+        padding: 0;
+    }
+
+    .sub-nav li a {
+        padding: 10px; /* Increased left padding for indentation */
+    }
+
+    /* Show sub-nav when parent is clicked (you'll need JS for this) */
+    .show-sub-nav > .sub-nav {
+        display: block;
+    }
+
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .sub-nav {
+        position: static;
+        display: none;
+        box-shadow: none;
+    }
+
+    .nav--visible {
+        transform: translateX(0);
+    }
+
+    .nav-toggle--active .hamburger {
+        transform: rotate(135deg);
+    }
+
+    .nav-toggle--active .hamburger::before,
+    .nav-toggle--active .hamburger::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contact-details, .social-media {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .social-media {
+        margin-top: 10px;
+    }
+
+
+}
