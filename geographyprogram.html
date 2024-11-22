@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="about.css">
+<!-- Chemistry Programme -->
+<style>
+    header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f8fb;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    .section {
+        padding: 40px;
+        margin: 0 auto;
+        max-width: 1100px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: 600;
+    }
+    .profiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    .profile {
+        background-color: #ecf0f1;
+        padding: 20px;
+        border-radius: 15px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    .profile img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+    .profile-title {
+        font-size: 1.2rem;
+        color: #2c3e50;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    .profile-designation {
+        font-size: 1rem;
+        color: #7f8c8d;
+        margin-bottom: 8px;
+    }
+    .profile-qualification {
+        font-size: 1rem;
+        color: #1445af;
+        font-weight: bold;
+    }
+    .profile-title, .profile-designation, .profile-qualification {
+        transition: color 0.3s ease;
+    }
+    .profile:hover .profile-title {
+        color: #2980b9;
+    }
+    .profile:hover .profile-designation {
+        color: #2980b9;
+    }
+    .profile:hover .profile-qualification {
+        color: #2980b9;
+    }
+</style>
+<!-- Geography Programme -->
+<div class="section">
+    <h2>Geography Programme</h2>
+    <div class="profiles">
+        <div class="profile">
+            <img src="Dr.-yezer.png" alt="Dr. Yezer">
+            <div class="profile-title">Dr. Yezer</div>
+            <div class="profile-designation">Lecturer</div>
+            <div class="profile-qualification">PhD Education Policy Reform in Bhutan</div>
+        </div>
+        <div class="profile">
+            <img src="rinchen-zangmo-e1721903696723.png" alt="Rinchen Zangmo">
+            <div class="profile-title">Rinchen Zangmo</div>
+            <div class="profile-designation">Associate Lecturer</div>
+            <div class="profile-qualification">MSc Ecology and Environmental Studies</div>
+        </div>
+        <div class="profile">
+            <img src="jeeven-e1721903769106.png" alt="Jeewan Kumar Bastola">
+            <div class="profile-title">Jeewan Kumar Bastola</div>
+            <div class="profile-designation">Associate Lecturer</div>
+            <div class="profile-qualification">MSc Ecology and Environmental Studies</div>
+        </div>
+        <div class="profile">
+            <img src="jigdrelT.jpeg" alt="Jigdrel T Dorji">
+            <div class="profile-title">Jigdrel T Dorji</div>
+            <div class="profile-designation">Assistant Lecturer</div>
+            <div class="profile-qualification">BSc Honours in Geography</div>
+        </div>
+    </div>
+</div>
+</div>    
+</head>
+</html>

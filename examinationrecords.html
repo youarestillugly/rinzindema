@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>College Website</title>
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+    #examination-records {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    padding: 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+    margin-bottom: 60px; /* Add space below this section */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#examination-records h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #1a73e8;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    animation: slideInFromTop 1s ease-out;
+}
+
+@keyframes slideInFromTop {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+#examination-records h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #1a73e8;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+
+#examination-records h2:hover::after {
+    width: 120px;
+}
+
+#examination-records p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInText 1.2s ease-out;
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#examination-records ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+#examination-records li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#examination-records li::before {
+    content: '•';
+    color: #1a73e8;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+}
+
+#examination-records li:hover {
+    color: #000; /* Change hover color to black */
+    transform: translateX(5px);
+}
+
+#examination-records a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+#examination-records a:hover {
+    color: #000; /* Change hover color to black */
+    text-decoration: underline;
+}
+
+#examination-records h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    animation: slideInFromRight 1s ease-out;
+}
+
+@keyframes slideInFromRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+#examination-records h3::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #1a73e8;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#examination-records h3:hover::after {
+    width: 100px;
+}
+
+@media (max-width: 768px) {
+    #examination-records h2 {
+        font-size: 30px;
+    }
+
+    #examination-records h3 {
+        font-size: 24px;
+    }
+
+    #examination-records p {
+        font-size: 16px;
+    }
+
+    #examination-records li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #examination-records h2 {
+        font-size: 24px;
+    }
+
+    #examination-records h3 {
+        font-size: 20px;
+    }
+
+    #examination-records p {
+        font-size: 14px;
+    }
+
+    #examination-records li {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentassociation.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="examination-records">
+        <h2>Examination Records</h2>
+        <p>Please take note of the following information for obtaining duplicate student records documents from Sherubtse College:</p>
+        
+        <ul>
+            <li>There is no charge for the first issuance of mark sheets and certificates, including the provisional certificate. Provisional certificates will only be issued prior to the graduates’ convocation.</li>
+            <li>Duplicate certificates will be issued by the Registrar.</li>
+            <li>Duplicate transcripts will only be processed after providing evidence of payment.</li>
+            <li>Payment should be made to Sherubtse College, Account Number [Insert Account Number Here].</li>
+            <li>The evidence of payment and relevant details should be emailed to <a href="mailto:records.sherubtse@rub.edu.bt">records.sherubtse@rub.edu.bt</a>.</li>
+            <li>The necessary documents should be collected in person by a designated representative from the college.</li>
+        </ul>
+    
+        <h3>Mailing Official Transcripts</h3>
+        <ul>
+            <li>An electronic copy of the transcripts will be sent by the college at no cost.</li>
+            <li>For hard copies of the transcripts, duplicate transcript fees and postage charges apply for mailing.</li>
+            <li>Please send your request to <a href="mailto:records.sherubtse@rub.edu.bt">records.sherubtse@rub.edu.bt</a> along with a scanned copy of your transcript.</li>
+            <li>Processing time is 3-5 working days, and it may extend further during vacation periods. Please consider this timeframe when making plans.</li>
+        </ul>
+    </section>
+       
+    
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3>Sherubtse College</h3>
+                    <p>Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p>Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</body>
+</html>
+
+
+

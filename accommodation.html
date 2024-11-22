@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>College Website</title>
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+        .accommodation-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: #1E3A8A; /* Bold blue color for headings */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.6em;
+    margin-top: 15px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.allocation-section, .on-campus-accommodation, .accommodation-types {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.type-section {
+    background-color: #2081c7;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.accommodation-types {
+    margin-bottom: 40px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 40px;
+    transition: transform 0.3s ease;
+}
+
+.allocation-image {
+    width: 100%;
+    max-width: 350px; /* Limiting the max width for a better layout */
+    height: 350px; /* Fixing the height to make the images square */
+    object-fit: cover; /* Ensures images maintain aspect ratio and fill the container */
+    border-radius: 15px; /* Rounded corners for a soft look */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Both images will have square-like shapes with the same polygon effect */
+.allocation-image {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Square shape */
+}
+
+.allocation-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .image-container {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .allocation-image {
+        max-width: 90%;  /* Allow the images to adjust better on smaller screens */
+        margin-bottom: 15px;  /* Space between images */
+    }
+
+    .allocation-image {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Keep the square shape for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .allocation-image {
+        max-width: 100%;  /* Full width for very small screens */
+        margin-bottom: 10px;
+    }
+
+    .allocation-image {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); /* Keep the square shape on very small screens */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3 style="color: black;">Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentassociation.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="accommodation-container">
+        <h1>Accommodation</h1>
+        <h2>New Male and Female Residence Hall Allocation 2024</h2>
+        <p>Welcome to the 2024 academic year! We are excited to announce the residence hall allocations for new students, with dedicated halls for both male and female students, ensuring a comfortable and inclusive living environment for everyone.</p>
+    
+        <div class="allocation-section">
+            <h3>Male Residence Hall Allocation</h3>
+            <p>Details about male residence hall allocation.</p>
+            <a href="Male-Residence-Hall-Allocation (1).xlsx" download class="excel-link">Download Male Allocation</a>
+        </div>
+        
+        <div class="allocation-section">
+            <h3>Female Residence Hall Allocation</h3>
+            <p>Details about female residence hall allocation.</p>
+            <a href="Female-Residence-Hall-Allocation.xlsx" download class="excel-link">Download Female Allocation</a>
+        </div>
+        
+        <div class="image-container">
+            <img src="college hall.jpeg" alt="Residence Halls" class="allocation-image">
+            <img src="college hall1.jpeg" alt="Residence Halls" class="allocation-image">
+        </div>
+        
+    
+        <div class="on-campus-accommodation">
+            <h3>On-campus Accommodation</h3>
+            <p>Sherubtse has 20 on-campus residential accommodations (10 female residences and 10 male residences) with free unlimited Wi-Fi facilities. Students admitted on Government scholarship receive a monthly stipend of Nu. 2, 500, of which Nu. 250 is deducted every month towards rent for accommodation.</p>
+        </div>
+    
+        <div class="accommodation-types">
+            <h3>Accommodation on campus is of two types:</h3>
+            
+            <!-- Centrally Catered Residence Halls Section -->
+            <div class="type-section">
+                <h4>Centrally Catered Residence Halls</h4>
+                <p>There are three centrally catered residence halls for females and two for males. Meals are provided from the common mess. All Year 1 students are allocated centrally catered residence halls during their first year. Students on Government scholarships residing in centrally catered residence halls are not paid stipend since Nu. 2250 is used for providing meals and other miscellaneous expenditures incurred on running the mess daily and Nu. 250 is deducted as rent. Self-financed students residing in centrally catered residence halls will have to pay Nu. 2250 per month as mess expenses.</p>
+            </div>
+    
+            <!-- Self-catering Residence Halls Section -->
+            <div class="type-section">
+                <h4>Self-catering Residence Halls</h4>
+                <p>All students after completing Year 1 are allocated self-catering residence halls. There are sixteen self-catering residence halls: 8 for male students and 8 for female students. Students have to manage meals on their own and are paid Nu. 2250 as stipend after deducting Nu. 250 as rent.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3 style="color: white;">Sherubtse College</h3>
+                    <p>Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p>Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
+  </body>
+</html>

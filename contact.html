@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+    /* Base Styles */
+#contact-us {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgb(203, 214, 213) 0%, rgb(196, 203, 209) 100%);
+    text-align: center;
+    position: relative;
+    color: #000000;
+    overflow: hidden;
+}
+
+#contact-us h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Cards Wrapper */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Contact Card Styles */
+.contact-card {
+    background: #fff;
+    color: #333;
+    border-radius: 12px;
+    width: calc(33% - 2rem);
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-out;
+    transform: scale(1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.contact-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: #2196F3;
+}
+
+.contact-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.contact-card:hover::before {
+    opacity: 1;
+}
+
+/* Card Icon */
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #2196F3;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-card:hover .card-icon {
+    transform: rotate(360deg);
+}
+
+/* Card Title */
+.contact-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.contact-card:hover h3 {
+    color: #2196F3;
+}
+
+/* Contact Details */
+.contact-card p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-card a {
+    color: #2196F3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-card a:hover {
+    color: #0d47a1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-us h2 {
+        font-size: 2.8rem;
+    }
+
+    .contact-card {
+        width: 45%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact-us h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact-card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contact-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    </style>
+
+    <title>College Website</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentservice.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <article>
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-card">
+                    <div class="card-icon">👨‍💼</div>
+                    <h3>President</h3>
+                    <p><strong>Mr. Tshering Wangdi</strong></p>
+                    <p>Email: <a href="mailto:president.sherubtse@rub.edu.bt">president.sherubtse@rub.edu.bt</a></p>
+                    <p>Phone: <a href="tel:+97504535100">+975-04-535100</a></p>
+                </div>
+        
+                <div class="contact-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Academic Affairs</h3>
+                    <p><strong>Dean of Academic Affairs</strong></p>
+                    <p>Mr. Sonam Dendup</p>
+                    <p>Email: <a href="mailto:daa.sherubtse@rub.edu.bt">daa.sherubtse@rub.edu.bt</a></p>
+                    <p>Phone: <a href="tel:+97504535143">+975-04-535143</a></p>
+                </div>
+        
+                <div class="contact-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Student Affairs</h3>
+                    <p><strong>Dean of Student Affairs</strong></p>
+                    <p>Mr. Thinley Namgyel</p>
+                    <p>Email: <a href="mailto:dsa.sherubtse@rub.edu.bt">dsa.sherubtse@rub.edu.bt</a></p>
+                    <p>Phone: <a href="tel:+97504535171">+975-04-535171</a></p>
+                </div>
+        
+                <div class="contact-card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Research & Industrial Linkages</h3>
+                    <p><strong>Dean of Research & Industrial Linkages</strong></p>
+                    <p>Dr. Yezer</p>
+                    <p>Email: <a href="mailto:dril.sherubtse@rub.edu.bt">dril.sherubtse@rub.edu.bt</a></p>
+                    <p>Phone: <a href="tel:+97504535171">+975-04-535171</a></p>
+                </div>
+        
+                <div class="contact-card">
+                    <div class="card-icon">📞</div>
+                    <h3>Administration</h3>
+                    <p><strong>Assistant ADM Officer</strong></p>
+                    <p>Mr. Yeshey Penjor</p>
+                    <p>Email: <a href="mailto:yeshey.sherubtse@rub.edu.bt">yeshey.sherubtse@rub.edu.bt</a></p>
+                    <p>Phone: <a href="tel:+97504535208">+975-04-535208</a></p>
+                </div>
+        
+                <div class="contact-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Webmaster</h3>
+                    <p><strong>ICT Team</strong></p>
+                    <p>Email: <a href="mailto:ict.sherubtse@rub.edu.bt">ict.sherubtse@rub.edu.bt</a></p>
+                </div>
+        
+                <div class="contact-card">
+                    <div class="card-icon">📋</div>
+                    <h3>Exam Records</h3>
+                    <p>Email: <a href="mailto:records.sherubtse@rub.edu.bt">records.sherubtse@rub.edu.bt</a></p>
+                    <p>Phone: <a href="tel:+97504535341">+975-04-535341</a></p>
+                </div>
+            </div>
+        </section>        
+    </article>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3>Sherubtse College</h3>
+                    <p>Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p>Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</body>
+</html>

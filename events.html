@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>College Website</title>
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+    #news {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1.5s ease-out;
+    margin-bottom: 80px;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#news h2 {
+    font-size: 38px;
+    color: #333;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+#news h2::after {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 4px;
+    background-color: #00aaff;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+#news h2:hover::after {
+    width: 120px;
+}
+
+.news-item {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+}
+
+.news-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #00aaff;
+}
+
+.news-item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.news-item h3 a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.news-item h3 a:hover {
+    color: #00aaff;
+    transform: translateX(5px);
+}
+
+.news-item p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-family: 'Georgia', serif;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #00aaff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.read-more:hover {
+    background-color: #0088cc;
+    transform: translateY(-5px);
+}
+
+.read-more::after {
+    content: ' →';
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover::after {
+    transform: translateX(7px);
+}
+
+/* Ensuring images inside .news-item are well-styled */
+.news-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px; /* Limit the max width of the news-item container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-item:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.news-item h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+
+.news-item img {
+    width: 100%;           /* Ensure the image fills the container width */
+    max-width: 600px;      /* Limit the maximum width of the image */
+    height: auto;          /* Keep the image's aspect ratio */
+    border-radius: 8px;    /* Rounded corners for images */
+    margin: 15px 0;
+    object-fit: cover;     /* Make sure images fit the container without stretching */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item img:hover {
+    transform: scale(1.05); /* Adds a subtle zoom effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds shadow effect on hover */
+}
+
+/* Style for the 'read more' button */
+.read-more {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+}
+
+.read-more:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+.read-more::after {
+    content: ' →';
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover::after {
+    transform: translateX(7px); /* Arrow moves slightly */
+}
+
+
+@media (max-width: 768px) {
+    #news h2 {
+        font-size: 30px;
+    }
+
+    .news-item {
+        padding: 20px;
+    }
+
+    .news-item h3 {
+        font-size: 22px;
+    }
+
+    .read-more {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #news h2 {
+        font-size: 26px;
+    }
+
+    .news-item h3 {
+        font-size: 20px;
+    }
+
+    .news-item p {
+        font-size: 14px;
+    }
+
+    .read-more {
+        font-size: 14px;
+    }
+}
+
+    </style>    
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentservice.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="news">
+        <h2>Latest News</h2>
+        
+        <div class="news-item">
+            <h3>Sherubtse College Hosts Research Workshop and Guest Lecture on AI, Financial Literacy, and Socio-Political Theories</h3>
+            <img src="research.jpg" alt="Sherubtse College Research Workshop" class="news-image">
+            <p>On September 30, 2024, Sherubtse College hosted a comprehensive research workshop and a series of engaging guest lectures featuring topics such as Artificial Intelligence, Financial Literacy, and Socio-Political Theories. The event gathered experts...</p>
+            <a href="research.html" class="read-more">Read More</a>
+        </div>
+    
+        <div class="news-item">
+            <h3>Workshop on Symmetries, Data Science and AI for Physicists</h3>
+            <img src="workshop.jpeg" alt="intensive workshop" class="news-image">
+            <p>The International Center for Theoretical Physics, Physics Without Frontiers, in collaboration with the University of Sussex and DISCnet, organized a 5-day intensive workshop on Symmetries, Data Science, and AI for Physicists...</p>
+            <a href="workshop.html" class="read-more">Read More</a>
+        </div>
+    
+        <div class="news-item">
+            <h3>Academic Talk</h3>
+            <img src="academictalk.jpg" alt="academic talk" class="news-image">
+            <p>Two Professors from the Department of Mathematical Sciences delivered an academic talk during the Monday morning assembly. The talk covered advanced topics in mathematics and was attended by both faculty members and first-year students...</p>
+            <a href="academictalk.html" class="read-more">Read More</a>
+        </div>
+    
+        <div class="news-item">
+            <h3>Glimpses of the College Graduation</h3>
+            <img src="graduation.jpg" alt="Sherubtse College Graduation Ceremony" class="news-image">
+            <p>The Sherubtse College Graduation Ceremony took place with the attendance of HE the Minister for Home Affairs and Hon'ble Dasho Dzongda, Trashigang Dzongkhag. A total of 433 students graduated across 18 different undergraduate programmes...</p>
+            <a href="graduation.html" class="read-more">Read More</a>
+        </div>
+    
+        <div class="news-item">
+            <h3>Sherubtse Celebrates 15th Coronation Anniversary</h3>
+            <img src="15thCoronation.jpg" alt="15th Coronation Anniversary" class="news-image">
+            <p>The Sherubtse family gathered at the Zangthopelri to commemorate and celebrate the 15th Coronation Day Anniversary of our beloved King. Students, staff, and faculty offered butter lamps and paid tribute...</p>
+            <a href="15thCoronation.jpg" class="read-more">Read More</a>
+        </div>
+    
+        <div class="news-item">
+            <h3>Professor Wim Highlights the Importance of Mental Health in Young People</h3>
+            <img src="Professor.jpg" alt="Importance of Mental Health" class="news-image">
+            <p>Mr. Wim, a faculty member from the Social Science Department, delivered a lecture emphasizing the importance of mental health among young people. He discussed challenges students face, particularly during exam periods...</p>
+            <a href="professor.html" class="read-more">Read More</a>
+        </div>
+    
+    </section>
+    
+    
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3>Sherubtse College</h3>
+                    <p>Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p>Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
+  </body>
+</html>

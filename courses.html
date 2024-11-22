@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>College Website</title>
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+        /* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Courses Section */
+#courses {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#courses h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.course-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.course-card img:hover {
+    transform: scale(1.05);
+}
+
+.course-card h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.course-card p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin: 10px 0;
+}
+
+.btn-enroll {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-enroll:hover {
+    background-color: #f1f4f7;
+    transform: scale(1.1);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentservice.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <article>
+        <!-- Courses Section -->
+    </section>
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <div class="course-container">
+    
+            <!-- Course 1 -->
+            <div class="course-card">
+                <img src="dsdaimg.webp" alt="Bachelor of Data Science" class="course-image" width="250px">
+                <h3>Bachelor of Data Science and Data Analytics</h3>
+                <p>Learn the principles of data analysis, machine learning, and big data technologies in this comprehensive program.</p>
+                <a href="dsda.html" class="btn-enroll">Read More</a>
+            </div>
+    
+            <!-- Course 2 -->
+            <div class="course-card">
+                <img src="epsimg.jpg" alt="Bachelor of Economics and Political Science" class="course-image" width="250px">
+                <h3>Bachelor of Economics and Political Science</h3>
+                <p>The Bachelor's in Economics and Political Science equips students with knowledge of economic theories and political systems for careers in public policy and research.</p>
+                <a href="eps.html" class="btn-enroll">Read More</a>
+            </div>
+    
+            <!-- Course 3 -->
+            <div class="course-card">
+                <img src="dcpmimg.png" alt="Bachelor of Digital Communication & Project Management" class="course-image" width="250px">
+                <h3>Bachelor of Digital Communication & Project Management</h3>
+                <p>The Bachelor's in Digital Communication and Project Management prepares students to manage digital media projects and effectively communicate in the digital age.</p>
+                <a href="dcpm.html" class="btn-enroll">Read More</a>
+            </div>
+    
+            <!-- Course 4 -->
+            <div class="course-card">
+                <img src="lifescienceimg.webp" alt="BSc Life Science" class="course-image" width="250px">
+                <h3>BSc in life Science</h3>
+                <p>The Bachelor's in Life Science offers students a deep understanding of biological sciences, preparing them for careers in research, healthcare, and environmental conservation.</p>
+                <a href="lifescience.html" class="btn-enroll">Read More</a>
+            </div>
+    
+            <!-- Course 5 -->
+            <div class="course-card">
+                <img src="mathematicsimg.jpg" alt="BSc in Mathematics" class="course-image" width="250px">
+                <h3>BSc in Mathematics</h3>
+                <p>The BSc in Mathematics provides students with a solid foundation in mathematical theories and problem-solving skills, preparing them for careers in research, analytics, and education.</p>
+                <a href="math.html" class="btn-enroll">Read More</a>
+            </div>
+
+            <!-- Course 6 -->
+            <div class="course-card">
+                <img src="chemistryimg.jpg" alt="BSc in Chemistry" class="course-image" width="250px">
+                <h3>BSc in Chemistry</h3>
+                <p>The BSc in Chemistry equips students with a strong understanding of chemical principles and laboratory techniques, preparing them for careers in research, industry, and environmental science.</p>
+                <a href="chemistry.html" class="btn-enroll">Read More</a>
+            </div>
+
+            <!-- Course 7 -->
+            <div class="course-card">
+                <img src="Physicsimg.webp" alt="BSc in Physics" class="course-image" width="250px">
+                <h3>BSc in Physics</h3>
+                <p>The BSc in Physics offers students a comprehensive understanding of fundamental physical principles and experimental techniques, preparing them for careers in research, engineering, and technology.</p>
+                <a href="physics.html" class="btn-enroll">Read More</a>
+            </div>
+        </div>
+    </section>
+    </article>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3>Sherubtse College</h3>
+                    <p>Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p>Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</body>
+</html>

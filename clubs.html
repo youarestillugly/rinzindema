@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>College Website</title>
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+#clubs {
+    padding: 50px 30px;
+    background: linear-gradient(135deg, #f0f4f8, #dfe9f3);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#clubs h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#clubs h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #3498db;
+}
+
+.clubs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.clubs-list li {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.clubs-list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.clubs-list li a {
+    display: block;
+    text-decoration: none;
+    color: #34495e;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.clubs-list li img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.clubs-list li img:hover {
+    transform: scale(1.1);
+}
+
+.clubs-list li a:hover {
+    color: #1b36d1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #clubs h2 {
+        font-size: 28px;
+    }
+
+    .clubs-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    #clubs h2 {
+        font-size: 24px;
+    }
+
+    .clubs-list {
+        grid-template-columns: 1fr;
+    }
+
+    .clubs-list li {
+        padding: 15px;
+    }
+
+    .clubs-list li a {
+        font-size: 16px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentassociation.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="clubs" class="hwb-section">
+        <h2>Clubs</h2>
+        <ul class="clubs-list">
+            <li><a href="fina.html"><img src="fina-300x225.png" alt="FINA Logo"> Forum of International and National Awareness (FINA)</a></li>
+            <li><a href="bhutanyouthfoundation.html"><img src="bhutanyouth-300x300.jpg" alt="Bhutan Youth Foundation Logo"> Bhutan Youth Foundation</a></li>
+            <li><a href="culturalclub.html"><img src="cultural-300x300.jpg" alt="Cultural Club Logo"> Cultural Club</a></li>
+            <li><a href="democracyclub.html"><img src="democracy-300x300.png" alt="Democracy Club Logo"> Democracy Club</a></li>
+            <li><a href="gyjurduechentshokpa.html"><img src="logo_sherubtse.png" alt="Gyjur Duechen Tshokpa Logo"> Gyjur Duechen Tshokpa</a></li>
+            <li><a href="gnhyouthclub.html"><img src="gnh-1-300x300.png" alt="GNH Youth Club Logo"> Sherubtse GNH Youth Club</a></li>
+            <li><a href="karateunit.html"><img src="karate-296x300.png" alt="Karate Unit Logo"> Karate Unit</a></li>
+            <li><a href="roversscout.html"><img src="rovers-300x300.jpg" alt="Rovers Scout Logo"> Rovers Scout</a></li>
+            <li><a href="salonunit.html"><img src="salon-300x300.png" alt="Salon Unit Logo"> Salon Unit</a></li>
+            <li><a href="artclub.html"><img src="art-296x300.jpg" alt="Art Club Logo"> Sherubtse Art Club</a></li>
+            <li><a href="healthunit.html"><img src="health-300x300.png" alt="Health Unit Logo"> Sherubtse Health Unit</a></li>
+            <li><a href="taekwondounit.html"><img src="Taekwondo-297x300.jpg" alt="Taekwondo Unit Logo"> Sherubtse Taekwondo Unit</a></li>
+            <li><a href="singyekarmunit.html"><img src="Singye-Karm-Unit-300x300.jpg" alt="Singye Karm Unit Logo"> Singye Karm Unit</a></li>
+            <li><a href="https://sms-5kjn.vercel.app/"><img src="sms-300x300.jpg" alt="Media Society Logo"> Sherubtse Media Society</a></li>
+            <li><a href="organicfarmingsociety.html"><img src="organic-296x300.jpg" alt="Organic Farming Society Logo"> Sherubtse Organic Farming Society</a></li>
+            <li><a href="https://shercolssu.vercel.app/"><img src="ssu.png" alt="Social Service Unit Logo"> Social Service Unit</a></li>
+            <li><a href="toiletorganization.html"><img src="stoileto-300x224.jpg" alt="Toilet Organization Logo"> Sherubtse Toilet Organization</a></li>
+            <li><a href="tarayanaunit.html"><img src="tarayana-300x300.png" alt="Tarayana Unit Logo"> Sherubtse Tarayana Unit</a></li>
+            <li><a href="https://sherubtse-un-gri3.vercel.app/"><img src="un-300x300.jpg" alt="UN Club Logo"> Sherubtse UN Club</a></li>
+            <li><a href="volunteersinaction.html"><img src="y-via-300x300.jpg" alt="Volunteers in Action Logo"> Youth Volunteer in Action</a></li>
+            <li><a href="ypeer.html"><img src="ypeer-300x244.png" alt="ypeer"> Sherubtse Y-PEER Network</a></li>
+            <li><a href="artandhumanities.html"><img src="doah-300x300.jpg" alt="Arts and Humanities Logo"> Department of Arts and Humanities</a></li>
+            <li><a href="scienceforum.html"><img src="science-e1702179612843-293x300.png" alt="Science Forum Logo"> Sherubtse Science Forum</a></li>
+            <li><a href="socialscienceforum.html"><img src="social-science-297x300.jpg" alt="Social Science Forum Logo"> Social Science Forum</a></li>
+        </ul>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3>Sherubtse College</h3>
+                    <p>Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p>Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="about.css">
+<!-- Chemistry Programme -->
+<style>
+    header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f8fb;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    .section {
+        padding: 40px;
+        margin: 0 auto;
+        max-width: 1100px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 40px;
+        font-weight: 600;
+    }
+    .profiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    .profile {
+        background-color: #ecf0f1;
+        padding: 20px;
+        border-radius: 15px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    .profile img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+    .profile-title {
+        font-size: 1.2rem;
+        color: #2c3e50;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    .profile-designation {
+        font-size: 1rem;
+        color: #7f8c8d;
+        margin-bottom: 8px;
+    }
+    .profile-qualification {
+        font-size: 1rem;
+        color: #16a085;
+        font-weight: bold;
+    }
+    .profile-title, .profile-designation, .profile-qualification {
+        transition: color 0.3s ease;
+    }
+    .profile:hover .profile-title {
+        color: #2980b9;
+    }
+    .profile:hover .profile-designation {
+        color: #2980b9;
+    }
+    .profile:hover .profile-qualification {
+        color: #2980b9;
+    }
+</style>
+<div class="section">
+    <h2>Chemistry Programme</h2>
+    <div class="profiles">
+        <div class="profile">
+            <img src="tshewang-dendup.png" alt="Tshewang Dendup">
+            <div class="profile-title">Tshewang Dendup</div>
+            <div class="profile-designation">Assistant Professor</div>
+            <div class="profile-qualification">MSc Chemical Biology</div>
+        </div>
+        <div class="profile">
+            <img src="punam-mufchan.png" alt="Punam Mafchan">
+            <div class="profile-title">Punam Mafchan</div>
+            <div class="profile-designation">Lecturer</div>
+            <div class="profile-qualification">MSc Chemistry</div>
+        </div>
+        <div class="profile">
+            <img src="sangay-wangchuk.png" alt="Sangay Wangchuk">
+            <div class="profile-title">Sangay Wangchuk</div>
+            <div class="profile-designation">Lecturer</div>
+            <div class="profile-qualification">MSc Chemistry (Inorganic)</div>
+        </div>
+        <div class="profile">
+            <img src="karma-dorji-DoPS-e1722246723958.png" alt="Karma Dorji">
+            <div class="profile-title">Karma Dorji</div>
+            <div class="profile-designation">Assistant Lecturer</div>
+            <div class="profile-qualification">BSc Chemistry</div>
+        </div>
+        <div class="profile">
+            <img src="Dr.-Jas-Raj-Subba.png" alt="Dr. Jas Raj Subba">
+            <div class="profile-title">Dr. Jas Raj Subba</div>
+            <div class="profile-designation">Lecturer</div>
+            <div class="profile-qualification">PhD Chemistry</div>
+        </div>
+        <div class="profile">
+            <img src="nime-thering-e1722246854364.png" alt="Nim Tshering">
+            <div class="profile-title">Nim Tshering</div>
+            <div class="profile-designation">Assistant Lecturer</div>
+            <div class="profile-qualification">BSc Chemistry</div>
+        </div>
+        <div class="profile">
+            <img src="yethro-lhamop-e1722247031529.png" alt="Yetho Lhamo">
+            <div class="profile-title">Yetho Lhamo</div>
+            <div class="profile-designation">Assistant Lecturer</div>
+            <div class="profile-qualification">BSc Chemistry</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

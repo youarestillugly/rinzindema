@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="about.css">
+    <title>College Website</title>
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+        .scholarship-container {
+          max-width: 1200px;
+          margin: 20px auto;
+          padding: 30px;
+          background: linear-gradient(135deg, #ffffff, #f7f8fa);
+          border-radius: 20px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+          font-family: Arial, sans-serif;
+        }
+      
+        .scholarship-container h2 {
+          text-align: center;
+          background: linear-gradient(to right, #667eea, #764ba2);
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 10px;
+          margin-bottom: 20px;
+          font-size: 1.8rem;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      
+        .scholarship-section {
+          margin-bottom: 30px;
+          padding: 20px;
+          background: #fff;
+          border-radius: 15px;
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+      
+        .scholarship-section:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+      
+        .scholarship-section p,
+        .scholarship-section ul {
+          margin: 10px 0;
+          color: #444;
+          line-height: 1.6;
+        }
+      
+        .scholarship-section ul {
+          padding-left: 20px;
+          list-style: disc;
+        }
+      
+        .scholarship-section ul li {
+          margin: 8px 0;
+        }
+      
+        .admission-form {
+          background: #f9f9f9;
+          padding: 20px;
+          border-radius: 15px;
+          margin-top: 20px;
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+      
+        .admission-form label {
+          display: block;
+          margin: 10px 0 5px;
+          font-weight: bold;
+          color: #333;
+        }
+      
+        .admission-form input,
+        .admission-form select,
+        .admission-form textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+        }
+      
+        .admission-form button {
+          width: 100%;
+          background: linear-gradient(to right, #667eea, #764ba2);
+          color: #fff;
+          padding: 12px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background 0.3s ease;
+        }
+      
+        .admission-form button:hover {
+          background: linear-gradient(to right, #764ba2, #667eea);
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentservice.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="scholarship-container">
+        <div class="Government Scholarship">
+            <h2>Government Scholarship</h2>
+            <p>Start your journey with us. Apply for our diverse range of programs.</p>
+            <p>Our admissions process is straightforward and designed to assist you in joining the Sherubtse College community. Here are some key points:</p>
+            <ul class="criteria-list">
+                <li><strong>Application Deadline:</strong> July 15th, 2024</li>
+                <li><strong>Eligibility Criteria:</strong> Applicants must have passed Class XII with a minimum of 55% in subjects relevant to their program. For example, to be eligible for the BSc in Physics program, applicants must have a minimum of 55% in Physics, 45% in Mathematics, and Chemistry.</li>
+                <li><strong>Required Documents:</strong> Citizenship Identity Card, Transfer Certificate, Class 10 Mark Sheet and Pass Certificate, Class 12 Mark Sheet and Pass Certificate</li>
+            </ul>
+            
+        </div>
+        <!-- Card for Leadership Scholarship -->
+        <div class="card">
+            <h2>Leadership Scholarship</h2>
+            <p>This scholarship is available for applicants to the BSc in Life Science, BSc in Mathematics, BSc in Chemistry, and BSc in Physics programmes. To qualify, applicants must:</p>
+            <ul class="criteria-list">
+                <li>Be a regular student in 2023</li>
+                <li>Have served as School Captain in the academic year 2023</li>
+                <li>Meet the minimum criteria for the selected programme at Sherubtse College</li>
+                <li>Merit ranking based on aggregate scores in English and three best subjects</li>
+            </ul>
+            <p>Apply via email to <a href="mailto:records.sherubtse@rub.edu.bt">records.sherubtse@rub.edu.bt</a> by <strong>19th April 2024</strong>. The application form is available on <a href="https://www.sherubtse.edu.bt" target="_blank">www.sherubtse.edu.bt</a>.</p>
+        </div>
+    
+        <!-- Card for King's Scholarship -->
+        <div class="card">
+            <h2>King's Scholarship</h2>
+            <p>The King's Scholarship aims to support talented students in pursuing higher education. It is awarded based on academic excellence and leadership qualities demonstrated throughout high school.</p>
+            <p>Eligibility Criteria:</p>
+            <ul class="criteria-list">
+                <li>Top academic performance in secondary education</li>
+                <li>Proven leadership roles or community service</li>
+                <li>Meeting minimum admission requirements for the programme</li>
+            </ul>
+            <p>Application details will be announced on the Royal University of Bhutan's website. Visit <a href="https://www.rub.edu.bt" target="_blank">www.rub.edu.bt</a> for updates.</p>
+        </div>
+    
+        <!-- Card for Self-Funding Option -->
+        <div class="card">
+            <h2>Self-Funding Option</h2>
+            <p>Students who do not qualify for scholarships can opt for the self-funding route. This allows students to pursue their desired programme by covering tuition fees independently.</p>
+            <p>Annual Tuition Fees:</p>
+            <ul class="criteria-list">
+                <li><strong>Arts and Humanities Programmes:</strong> Nu. 75,457</li>
+                <li><strong>Science and Engineering Programmes:</strong> Nu. 93,479</li>
+            </ul>
+            <p>Payments can be made in two installments, with 50% due at the beginning of each semester. An annual increase of 2% applies to all tuition fees.</p>
+            <p>For more details, contact the Admissions Office at <a href="mailto:admissions.sherubtse@rub.edu.bt">admissions.sherubtse@rub.edu.bt</a>.</p>
+        </div>
+
+        <!-- Admissions Inquiry Form Section -->
+    <section id="admission-form">
+        <h2>Submit Your Requirements</h2>
+        <p>If you're ready to apply or need further information, please fill out the form below, and we’ll assist you through the admission process.</p>
+        
+        <form id="admissionForm" class="admission-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="program">Program of Interest:</label>
+            <select id="program" name="program" required>
+                <option value="bsc_physics">BSc in Physics</option>
+                <option value="bsc_chemistry">BSc in Chemistry</option>
+                <option value="bsc_biology">BSc in Biology</option>
+            </select>
+
+            <label for="documents">Upload Documents:</label>
+            <input type="file" id="documents" name="documents[]" multiple required>
+
+            <label for="message">Additional Comments or Questions:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit" class="btn-primary">Submit Application</button>
+        </form>
+    </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3>Sherubtse College</h3>
+                    <p style="color: white;">Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p style="color: white;">Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script>
+    document.getElementById("admissionForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from submitting the traditional way
+
+        // Form data collection
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const program = document.getElementById("program").value;
+        const message = document.getElementById("message").value;
+
+        // Basic validation and feedback
+        if (name && email && program) {
+            alert("Application submitted successfully!");
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Program:", program);
+            console.log("Message:", message);
+            // Here, normally form data would be sent to the server
+        } else {
+            alert("Please fill in all required fields.");
+        }
+    });
+</script>
+</body>
+</html>

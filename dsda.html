@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>College Website</title>
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+        /* Table Styling */
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px; /* Adds space between the table and footer */
+    text-align: left;
+}
+
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: white;
+            font-weight: 600;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f1f1f1;
+        }
+
+        tr:hover td {
+            background-color: #e0f7fa;
+            cursor: pointer;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .content h2 {
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            th, td {
+                font-size: 1em;
+                padding: 10px;
+            }
+        }
+
+        .container1 {
+    background-color: blue; /* Sets the background color to blue */
+    padding: 10px; /* Adjusts padding to make the container smaller */
+    width: 90%; /* Sets the width of the container to 80% of its parent element */
+    max-width: 1150px; /* Optional: Limits the maximum width to 600px */
+    margin: 0 auto; /* Centers the container horizontally */
+}
+
+
+.content h2 {
+    color: white; /* Optional: Changes the text color to white for better visibility */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentservice.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+        <div class="container1">
+            <div class="content">
+                <h2>Bachelors of Data Science & Data Analytics</h2>
+            </div>
+        </div>
+    
+        <div class="container">
+            <!-- Programme Introduction -->
+            <section class="introduction" style="text-align: justify;">
+                <h2>Programme Overview</h2>
+                <p>
+                    As the global economy experiences unprecedented disruption due to emerging technological advancements, an increasing emphasis is being placed on the importance of graduates gaining both transferable skills and specific qualifications. This ensures better long-term employment outcomes in an ever-changing global workplace.
+                </p>
+                <p>
+                    The Bachelors of Data Science and Data Analytics programme is designed to produce students with adaptive mindsets to handle job disruptions and seize various opportunities. The programme will emphasize producing highly skilled and knowledgeable graduates, ready for the challenges of the future.
+                </p>
+                <p>
+                    The programme focuses on data handling, visualization, and curation through modules in Data Science, Statistics, and Mathematics. Students will learn to apply statistical and computational principles to solve real-world problems with large-scale data. Graduates will be equipped to turn chaotic data into actionable insights, helping leaders make better strategic decisions.
+                </p>
+                <p>
+                    Data experiences will play a central role in all modules, from introductory to advanced capstone or research projects. Graduates will be able to perform data wrangling, analyse raw data from various sources, and generate powerful insights for informed decision-making.
+                </p>
+            </section>
+    
+            <!-- Year I Modules -->
+            <section class="modules">
+                <h2>Year I - Modules</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Module Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Foundations of Statistical Computing</td>
+                        </tr>
+                        <tr>
+                            <td>Foundations of Project Management</td>
+                        </tr>
+                        <tr>
+                            <td>Introduction to Environmental & Global Economics</td>
+                        </tr>
+                        <tr>
+                            <td>Principles of Digital Communication</td>
+                        </tr>
+                        <tr>
+                            <td>Dzongkha Communication 1</td>
+                        </tr>
+                        <tr>
+                            <td>Foundations of Data Science</td>
+                        </tr>
+                        <tr>
+                            <td>Foundations of Python Programming (Data oriented)</td>
+                        </tr>
+                        <tr>
+                            <td>Academic Research Skills</td>
+                        </tr>
+                        <tr>
+                            <td>Dzongkha Communication II</td>
+                        </tr>
+                        <tr>
+                            <td>Elective I</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    
+            <!-- Year II Modules -->
+            <section class="modules">
+                <h2>Year II - Modules</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Module Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Front End Web Development</td>
+                        </tr>
+                        <tr>
+                            <td>Modern Database Design</td>
+                        </tr>
+                        <tr>
+                            <td>Mathematics for Data Science I</td>
+                        </tr>
+                        <tr>
+                            <td>Data Analytics and Visualisation</td>
+                        </tr>
+                        <tr>
+                            <td>Elective II</td>
+                        </tr>
+                        <tr>
+                            <td>AI & Machine Learning</td>
+                        </tr>
+                        <tr>
+                            <td>Back End Web Development</td>
+                        </tr>
+                        <tr>
+                            <td>Mathematics for Data Science II</td>
+                        </tr>
+                        <tr>
+                            <td>Data Science Project I</td>
+                        </tr>
+                        <tr>
+                            <td>Elective III</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    
+            <!-- Year III Modules -->
+            <section class="modules">
+                <h2>Year III - Modules</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Module Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>User Interaction Design</td>
+                        </tr>
+                        <tr>
+                            <td>Deep Learning</td>
+                        </tr>
+                        <tr>
+                            <td>Agile Process and Practice</td>
+                        </tr>
+                        <tr>
+                            <td>Mathematics for Data Science III</td>
+                        </tr>
+                        <tr>
+                            <td>Elective IV</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced Deep Learning</td>
+                        </tr>
+                        <tr>
+                            <td>Bid Data</td>
+                        </tr>
+                        <tr>
+                            <td>Data Science Project II</td>
+                        </tr>
+                        <tr>
+                            <td>Research with Advanced Data Analytics</td>
+                        </tr>
+                        <tr>
+                            <td>Elective V</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    
+            <!-- Year IV Modules -->
+            <section class="modules">
+                <h2>Year IV - Modules</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Module Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Natural Language Processing</td>
+                        </tr>
+                        <tr>
+                            <td>Ethics in AI and Data Governance</td>
+                        </tr>
+                        <tr>
+                            <td>Optimization for data Science</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced Skills for Career Development</td>
+                        </tr>
+                        <tr>
+                            <td>Professional Certification I</td>
+                        </tr>
+                        <tr>
+                            <td>Professional Certification II</td>
+                        </tr>
+                        <tr>
+                            <td>Deep Experiential: Industry Capstone Project</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3>Sherubtse College</h3>
+                    <p>Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p>Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
+  </body>
+</html>

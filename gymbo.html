@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Service unit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        #hero {
+            background: linear-gradient(to right, #007bff, #0056b3);
+        }
+        .btn-primary {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+        .btn-primary:hover {
+            background-color: #004085;
+            border-color: #003057;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="unitlogo">
+                <img src="logo_sherubtse.png" alt="Sherubtse College Logo" style="height: 70px; margin-right: 20px;">
+            </div>
+            <h2 class="unitname">Sherubtse College of Education</h2>
+            <div class="navbar">
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; gap: 40px;">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="studentservice.html">Student Services</a></li>
+                            <li><a href="cources.html">Cources</a></li>
+                            <li><a href="Academic.html">Academic</a></li>
+                            <li><a href="calender.html">Calender</a></li>
+                    </ul>
+                </nav>
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger">
+                </button>
+            </div>  
+        </div>          
+    </header>
+    </article>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Sherubtse</p>
+                <p>Kanglung, Trashigang</p>
+                <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                <p>Phone: +975-4-535128</p>
+                    
+            </div>
+            
+            <div class="footer-section">
+                <h3>Downloads</h3>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+        
+            </div>
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    
+            </section>
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+        
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
+    </script>
+    
+   
+</body>
+</html>

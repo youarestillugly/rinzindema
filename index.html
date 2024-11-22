@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <title>College Website</title>
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+         /* Main Content Section */
+         .container {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .image-gallery {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .image-gallery .gallery-track {
+            display: flex;
+            animation: scroll 20s linear infinite;
+            gap: 10px;
+        }
+
+        .image-gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-200px * 5));
+            }
+        }
+
+        #about {
+    width: 100%;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Section hover transition */
+}
+
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease; /* Title hover transition */
+}
+
+#about h2:hover {
+    color: #2980b9;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+#about a {
+    font-weight: bold;
+    color: #3b5998;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Link hover transition */
+}
+
+#about a:hover {
+    color: #1a73e8;
+    transform: scale(1.1);
+}
+
+#about img {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #1a73e8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Image hover transition */
+}
+
+#about img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Read More Link Styling */
+.read-more {
+    color: #2980b9;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    justify-self: center;
+    margin-bottom: 10px;
+
+}
+
+.read-more:hover {
+    color: #3498db; /* Changes color on hover */
+}
+
+/* General Styling */
+#management-team {
+    padding: 50px 20px;
+    background-color: #f0f2f5; /* Light background color */
+    text-align: center;
+}
+
+/* Team Header Styling */
+.team-header {
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+}
+
+.team-logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.team-logo:hover {
+    transform: rotate(15deg); /* Slight rotation on hover */
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Team Container Styling */
+.Management {
+    margin-top: 50px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Team Member Styling */
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px); /* Lifts up the card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Image Styling */
+.team-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.team-image:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+/* Team Member Text Styling */
+h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Student Counts Section */
+.student-counts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.count-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.count-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.count-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.counter {
+    font-size: 2.5em;
+    color: #2980b9;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student-counts {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+}
+
+/* General Section Style */
+#courses {
+    font-family: 'Arial', sans-serif;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#courses h2 {
+    font-size: 2.5em;
+    color: #003366;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#courses h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    margin: 10px auto 0;
+}
+
+/* Vertical Scrolling */
+.course-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    overflow-y: auto;
+    max-height: 80vh;
+    scroll-behavior: smooth;
+    padding-right: 10px;
+}
+
+.course-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.course-container::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+.course-container::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+/* Course Card Styling */
+.course-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    height: 450px; /* Increased height */
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.course-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-image {
+    transform: scale(1.05);
+}
+
+.course-card h3 {
+    font-size: 1.3em;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.course-card p {
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 50px; /* Extra space to separate text from button */
+}
+
+.btn-enroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 8px 16px; /* Smaller button size */
+    font-size: 0.9em; /* Smaller text size */
+    color: #fff;
+    background: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease;
+    width: 120px; /* Fixed width for consistent button size */
+}
+
+.btn-enroll:hover {
+    background: #ffffff;
+}
+
+/* Animation on Scroll */
+.course-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentservice.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <article>
+        
+        <section id="about">
+            <h2>Sherubtse College</h2>
+            <p>Located in Kanglung, Sherubtse College is committed to providing high-quality education and fostering innovation.</p>
+            <p>
+                <a href="https://www.google.com/maps/place/Sherubtse+College/@27.2867859,91.5210151,720m/data=!3m2!1e3!4b1!4m6!3m5!1s0x375c73345a4c4fe1:0xf6de3f2306d7a1ec!8m2!3d27.2867812!4d91.52359!16zL20vMDIzMzdw?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: #3b5998; text-decoration: underline;">
+                    View Sherubtse College on Google Maps
+                </a>
+            </p>
+            <img src="sherubtse.JPG" alt="Image of Sherubtse College" style="width: 100%; max-width: 600px; margin-top: 10px;">
+        </section>
+        <div class="brochure-info">
+            <img src="Capture.png" alt="Brochure icon" class="brochure-image">
+            <p>To learn more about Sherubtse College, including its programs, facilities, and admission details, please click on the <a href="https://drive.google.com/file/d/1P-_oKYtmn_ah-iX5bVgLHw-uOz_HUHJ6/view" target="_blank" class="brochure-link">brochures</a>.</p>
+        </div>
+
+        <div class="image-gallery">
+            <div class="gallery-track">
+                <img src="campus.jpg" alt="Sherubtse College 1">
+                <img src="campus_1.jpg" alt="Sherubtse College 2">
+                <img src="campus_3.jpg" alt="Sherubtse College 3">
+                <img src="campus_4.jpg" alt="Sherubtse College 4">
+                <img src="Capture.png" alt="Sherubtse College 5">
+                <img src="campus.jpg" alt="Sherubtse College 1">
+                <img src="campus_1.jpg" alt="Sherubtse College 2">
+                <img src="campus_3.jpg" alt="Sherubtse College 3">
+                <img src="campus_4.jpg" alt="Sherubtse College 4">
+                <img src="Capture.png" alt="Sherubtse College 5">
+            </div>
+        </div>
+
+
+        <section id="news">
+            <h2 style="text-align: center; margin-bottom: 20px;">Latest News</h2>
+            <div class="news-container">
+                <!-- News Item 1 -->
+                <div class="news-item">
+                    <img src="research.jpg" alt="News 1 Image" class="news-image">
+                    <h3>Sherubtse College Hosts Research Workshop</h3>
+                    <p>On September 30, 2024, Sherubtse College hosted a comprehensive research workshop and a series of guest lectures focusing on AI, financial literacy, and socio-political theories.</p>
+                    <a href="research.html" class="read-more">Read More</a>
+                </div>
+                <!-- News Item 2 -->
+                <div class="news-item">
+                    <img src="workshop.jpeg" alt="News 2 Image" class="news-image">
+                    <h3>Workshop on Symmetries, Data Science, and AI</h3>
+                    <p>The International Center for Theoretical Physics and other collaborators organized a 5-day intensive workshop for physicists.</p>
+                    <a href="workshop.html" class="read-more">Read More</a>
+                </div>
+                <!-- News Item 3 -->
+                <div class="news-item">
+                    <img src="academictalk.jpg" alt="News 3 Image" class="news-image">
+                    <h3>Academic Talk by Mathematical Sciences Professors</h3>
+                    <p>Two professors delivered an academic talk during the Monday morning assembly attended by first-year students and faculty.</p>
+                    <a href="academictalk.html" class="read-more">Read More</a>
+                </div>
+                <!-- News Item 4 -->
+                <div class="news-item">
+                    <img src="graduation.jpg" alt="News 4 Image" class="news-image">
+                    <h3>College Graduation Ceremony</h3>
+                    <p>A total of 433 students graduated in the presence of the Minister for Home Affairs and the Hon'ble Dasho Dzongda.</p>
+                    <a href="graduation.html" class="read-more">Read More</a>
+                </div>
+                <!-- News Item 5 -->
+                <div class="news-item">
+                    <img src="15thCoronation.jpg" alt="News 5 Image" class="news-image">
+                    <h3>15th Coronation Anniversary Celebration</h3>
+                    <p>Sherubtse students and staff gathered to commemorate the 15th Coronation Day Anniversary of the King.</p>
+                    <a href="15thcoronation.html" class="read-more">Read More</a>
+                </div>
+                <!-- News Item 6 -->
+                <div class="news-item">
+                    <img src="Professor.jpg" alt="News 6 Image" class="news-image">
+                    <h3>Professor Wim Highlights Mental Health Importance</h3>
+                    <p>Professor Wim delivered an insightful talk on mental health, emphasizing its significance as exams approach.</p>
+                    <a href="professor.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </section>
+        
+    </section>
+</section>
+<section id="courses">
+    <h2>Our Courses</h2>
+    <div class="course-container">
+
+        <!-- Course 1 -->
+        <div class="course-card">
+            <img src="dsdaimg.webp" alt="Bachelor of Data Science" class="course-image" width="250px">
+            <h3>Bachelor of Data Science and Data Analytics</h3>
+            <p>Learn the principles of data analysis, machine learning, and big data technologies in this comprehensive program.</p>
+            <a href="dsda.html" class="btn-enroll">Read More</a>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card">
+            <img src="epsimg.jpg" alt="Bachelor of Economics and Political Science" class="course-image" width="250px">
+            <h3>Bachelor of Economics and Political Science</h3>
+            <p>The Bachelor's in Economics and Political Science equips students with knowledge of economic theories and political systems for careers in public policy and research.</p>
+            <a href="eps.html" class="btn-enroll">Read More</a>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card">
+            <img src="dcpmimg.png" alt="Bachelor of Digital Communication & Project Management" class="course-image" width="250px">
+            <h3>Bachelor of Digital Communication & Project Management</h3>
+            <p>The Bachelor's in Digital Communication and Project Management prepares students to manage digital media projects and effectively communicate in the digital age.</p>
+            <a href="dcpm.html" class="btn-enroll">Read More</a>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course-card">
+            <img src="lifescienceimg.webp" alt="BSc Life Science" class="course-image" width="250px">
+            <h3>BSc in life Science</h3>
+            <p>The Bachelor's in Life Science offers students a deep understanding of biological sciences, preparing them for careers in research, healthcare, and environmental conservation.</p>
+            <a href="lifescience.html" class="btn-enroll">Read More</a>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="course-card">
+            <img src="mathematicsimg.jpg" alt="BSc in Mathematics" class="course-image" width="250px">
+            <h3>BSc in Mathematics</h3>
+            <p>The BSc in Mathematics provides students with a solid foundation in mathematical theories and problem-solving skills, preparing them for careers in research, analytics, and education.</p>
+            <a href="math.html" class="btn-enroll">Read More</a>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="course-card">
+            <img src="chemistryimg.jpg" alt="BSc in Chemistry" class="course-image" width="250px">
+            <h3>BSc in Chemistry</h3>
+            <p>The BSc in Chemistry equips students with a strong understanding of chemical principles and laboratory techniques, preparing them for careers in research, industry, and environmental science.</p>
+            <a href="chemistry.html" class="btn-enroll">Read More</a>
+        </div>
+
+        <!-- Course 7 -->
+        <div class="course-card">
+            <img src="Physicsimg.webp" alt="BSc in Physics" class="course-image" width="250px">
+            <h3>BSc in Physics</h3>
+            <p>The BSc in Physics offers students a comprehensive understanding of fundamental physical principles and experimental techniques, preparing them for careers in research, engineering, and technology.</p>
+            <a href="physics.html" class="btn-enroll">Read More</a>
+        </div>
+    </div>
+</section>
+<!-- Management Team Section -->
+<section id="management-team">
+    <div class="team-header">
+        <h2>The Management Team</h2>
+        <p>The management team at Sherubtse brings together experienced professionals who collaboratively ensure the college’s operations run efficiently, providing a supportive environment for learning and teaching.</p>
+    </div>
+    
+    <section class="Management">
+        <div class="team-container">
+            <!-- Member 1 -->
+            <div class="team-member">
+                <img src="President.png" alt="Dr. John Doe, Tshering-Wangchuk-President" class="team-image">
+                <h3>Tshering Wangchuk</h3>
+                <p>President</p>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="team-member">
+                <img src="dean1.png" alt="sonam-dendup" class="team-image">
+                <h3>Sonam Dendup</h3>
+                <p>Dean of academic</p>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="team-member">
+                <img src="dean2.png" alt="thinley-Namgyel" class="team-image">
+                <h3>Thinley Namgyel</h3>
+                <p>Dean of Student Affairs </p>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="team-member">
+                <img src="dean3.png" alt="Dr.-yezer" class="team-image">
+                <h3>Dr. Yezer</h3>
+                <p>Dean of Research and Industrial Linkages</p>
+            </div>
+        </div>
+    </section>
+    <section class="student-counts">
+        <div class="count-item">
+            <h3>Male Students</h3>
+            <div class="counter" data-target="517">0</div>
+        </div>
+        <div class="count-item">
+            <h3>Female Students</h3>
+            <div class="counter" data-target="417">0</div>
+        </div>
+        <div class="count-item">
+            <h3>Staff</h3>
+            <div class="counter" data-target="153">0</div>
+        </div>
+        <div class="count-item">
+            <h3>Total Students</h3>
+            <div class="counter" data-target="934">0</div>
+        </div>
+    </section>    
+    </div>
+</section>
+
+    <section id="admissions">
+        <h2>Admissions</h2>
+        <p>Start your journey with us. Apply for our diverse range of programs.</p>
+        <p>Our admissions process is straightforward and designed to assist you in joining the Sherubtse College community. Here are some key points:</p>
+        <ul>
+            <li>Application Deadline: <strong>July 15th, 2024</strong></li>
+            <li>Eligibility Criteria: Applicants must have passed Class XII with a minimum of 55% in the subjects relevant to their program. For example, to be eligible for the BSc in Physics program, applicants must have a minimum of 55% in Physics, 45% in Mathematics and Chemistry.</li>
+            <li>Required Documents: Citizenship Identity Card and Transfer Certificate. Class 10 Mark Sheet and Pass Certificate. Class 12 Mark Sheet and Pass Certificate</li>
+        </ul>
+        <a href="apply.html" class="btn-primary">Apply Now</a> <!-- Call to Action -->
+    </section>    
+    </article>
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3style="color: white;">Sherubtse College</h3>
+                    <pstyle="color: white;">Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <pstyle="color: white;">Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <pstyle="color: white;">COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
+    <script>
+        // Counter Animation JavaScript
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                counter.innerText = '0';
+
+                const updateCounter = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+
+                    // Increment value
+                    const increment = target / 100;  // Adjust this value for speed
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCounter, 20); // Adjust this delay for speed
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCounter();
+            });
+        });
+    </script>
+  </body>
+</html>
