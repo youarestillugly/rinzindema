@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>College Website</title>
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+    /* Background for the section */
+#vacancy-announcement {
+    background-color: #f4f4f4; /* Light grey background */
+    padding: 80px 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000; /* Black text color */
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Style */
+#vacancy-announcement h2 {
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #003366; /* Dark blue for heading */
+}
+
+/* Announcement Items Style */
+.announcement-item {
+    background-color: #fff; /* White background for each item */
+    padding: 30px 40px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 950px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect for Announcements */
+.announcement-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Style */
+.announcement-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366; /* Dark blue for title */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Paragraph Style */
+.announcement-item p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333; /* Dark grey for paragraph text */
+    margin-bottom: 20px;
+}
+
+/* Fancy 'Read More' Button */
+.read-more {
+    background-color: #003366; /* Dark blue */
+    color: #fff; /* White text */
+    padding: 14px 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.read-more:hover {
+    background-color: #ffffff; /* Even darker blue */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.read-more::after {
+    content: ' →';
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover::after {
+    transform: translateX(8px);
+}
+
+/* Add subtle glow effect on hover */
+.announcement-item:hover h3,
+.announcement-item:hover p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentservice.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="vacancy-announcement">
+        <h2>Vacancies & Announcements</h2>
+    
+        <div class="announcement-item">
+            <h3>Shortlisted Candidates for Various Administrative Positions</h3>
+            <p>November 07, 2024 - The list of shortlisted candidates for various administrative positions at Sherubtse College has been announced. Click the link to view the full list and details.</p>
+            <a href="link_to_full_article_1" class="read-more">Read More</a>
+        </div>
+    
+        <div class="announcement-item">
+            <h3>Vacancy Announcement for Administrative Positions</h3>
+            <p>October 23, 2024 - Sherubtse College invites applications for various administrative positions. For more details on qualifications and how to apply, click the link below.</p>
+            <a href="link_to_full_article_2" class="read-more">Read More</a>
+        </div>
+    
+        <div class="announcement-item">
+            <h3>Shortlisted ICT Officer Viva-voce</h3>
+            <p>September 06, 2024 - The shortlisted candidates for the ICT Officer Viva-voce are announced. View the full list and schedule by following the link below.</p>
+            <a href="link_to_full_article_3" class="read-more">Read More</a>
+        </div>
+    
+        <div class="announcement-item">
+            <h3>RA Result _Spring Semester 2024</h3>
+            <p>August 5, 2024 - The RA result for the Spring Semester 2024 has been announced. Click the link to view the detailed results.</p>
+            <a href="link_to_full_article_4" class="read-more">Read More</a>
+        </div>
+    
+        <div class="announcement-item">
+            <h3>Shortlisted Candidates for the Post of Contract Faculty</h3>
+            <p>July 31, 2024 - The shortlisted candidates for the position of contract faculty have been released. Check the full list of selected candidates through the link below.</p>
+            <a href="link_to_full_article_5" class="read-more">Read More</a>
+        </div>
+    
+        <div class="announcement-item">
+            <h3>Selected Candidates for the Post of Assistant Lecturer/Lecturer (Life Science)</h3>
+            <p>August 2, 2024 - The selected candidates for the Assistant Lecturer/Lecturer positions in Life Science are now available. View the full selection list by following the link.</p>
+            <a href="link_to_full_article_6" class="read-more">Read More</a>
+        </div>
+    
+        <div class="announcement-item">
+            <h3>Selected Candidates for the Post of Assistant Lecturer/Lecturer (DSDA)</h3>
+            <p>July 30, 2024 - The selection results for Assistant Lecturer/Lecturer positions in DSDA have been posted. For full details, click on the link below.</p>
+            <a href="link_to_full_article_7" class="read-more">Read More</a>
+        </div>
+    
+        <div class="announcement-item">
+            <h3>Vacancy Announcement for Contract Faculty</h3>
+            <p>July 19, 2024 - Applications are open for the position of contract faculty. Visit the link for more information on qualifications and the application process.</p>
+            <a href="link_to_full_article_8" class="read-more">Read More</a>
+        </div>
+    
+        <div class="announcement-item">
+            <h3>Gyalsung Exemption Letter for New Students</h3>
+            <p>June 3, 2024 - New students can now apply for Gyalsung Exemption. For more information and to apply, click on the link below.</p>
+            <a href="link_to_full_article_9" class="read-more">Read More</a>
+        </div>
+    
+        <div class="announcement-item">
+            <h3>Selected Candidates for the New Programs under Self-finance</h3>
+            <p>May 30, 2024 - The list of selected candidates for the new self-financed programs has been announced. Please check the full list by following the link.</p>
+            <a href="link_to_full_article_10" class="read-more">Read More</a>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3>Sherubtse College</h3>
+                    <p>Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p>Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
+  </body>
+</html>

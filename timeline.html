@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        header {
+    position: sticky;
+    top: 0; /* Sticks the header at the top of the viewport */
+    z-index: 1000; /* Ensures the header appears above other elements */
+    background-color: #ffffff; /* Background color to make it distinct */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for emphasis */
+}
+        /* General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Timeline Container */
+.timeline-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+/* Timeline Line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #1a73e8, #3f51b5);
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+/* Timeline Event */
+.timeline-event {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 2s ease forwards;
+}
+
+.timeline-event-left {
+    left: 0;
+    text-align: right;
+    animation-delay: 0.4s;
+}
+
+.timeline-event-right {
+    left: 50%;
+    text-align: left;
+    animation-delay: 0.8s;
+}
+
+/* Date Styling */
+.timeline-date {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background: #1a73e8;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    transition: background 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-date:hover {
+    background: #3f51b5;
+    transform: scale(1.1);
+}
+
+/* Content Styling */
+.timeline-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.8s ease, box-shadow 0.8s ease, background-color 0.8s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+/* Event Connection Dots */
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -15px;
+    width: 30px;
+    height: 30px;
+    background: #1a73e8;
+    border-radius: 50%;
+    z-index: 1;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.8s ease, background 0.8s ease, box-shadow 0.8s ease;
+}
+
+.timeline-event-left::before {
+    right: -15px;
+    left: auto;
+}
+
+.timeline-event:hover::before {
+    background: #3f51b5;
+    transform: scale(1.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+.timeline-content h3 {
+    font-size: 1.8rem;
+    color: #3f51b5;
+    margin-bottom: 10px;
+    transition: color 0.6s ease;
+}
+
+.timeline-content:hover h3 {
+    color: #1a73e8;
+}
+
+/* List Styling */
+.timeline-content ul {
+    margin: 0;
+    padding: 0 20px;
+    list-style: disc;
+    color: #666;
+}
+
+.timeline-content ul li {
+    margin-bottom: 10px;
+    transition: color 0.5s ease;
+}
+
+.timeline-content:hover ul li {
+    color: #444;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .timeline-event {
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .timeline-event-left,
+    .timeline-event-right {
+        left: 0;
+    }
+
+    .timeline-line {
+        left: 5%;
+        width: 2px;
+    }
+
+    .timeline-event::before {
+        left: -30px;
+    }
+}
+
+    </style>
+
+    <title>College Website</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="College Logo" />
+                
+            </div>
+            <div class="college-name">
+                <h3>Sherubtse College</h3>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger">
+            </button>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home </a></li>
+                    <li class="has-dropdown"></li>
+                    <li><a href="#">About Us &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="about.html">Mission & Vision</a></li>
+                            
+                            <li><a href="timeline.html">Timeline</a></li>
+
+                            <li><a href="alumni.html">Alumni</a></li>
+                            
+                            <li><a href="faculty.html">Faculty-Profile</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Academics &darr;</a>
+                        <ul class="sub-nav">
+                            
+                            <li><a href="courses.html">Course</a></li>
+                            
+                            <li><a href="Academic.html">Criteria</a></li>
+                            
+                            <li><a href="calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Student Service  &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="accommodation.html">Accommodation</a></li>
+                            <li><a href="happiness&wellbeing.html">Happiness and well-being center</a></li>
+                            <li><a href="clubs.html">Clubs</a></li>
+                            <li><a href="studentservice.html">Student Association</a></li>
+                            <li><a href="games&sports.html">Games & Sports</a></li>
+                            <li><a href="examinationrecords.html">Examination Records</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Announcement &darr;</a>
+                        <ul class="sub-nav">
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="vacancy.html">Vacancy & Anniuncements</a></li>
+                            <li><a href="tender.html">Tender</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <article>
+        <div class="timeline-container">
+            <!-- Timeline Line -->
+            <div class="timeline-line"></div>
+    
+            <!-- Event 1968 -->
+            <div class="timeline-event timeline-event-left">
+                <div class="timeline-date">1968</div>
+                <div class="timeline-content">
+                    <h3>Sherubtse is born</h3>
+                    <ul>
+                        <li>Sherubtse High School established, inaugurated by the Third King Jigme Dorji Wangchuck.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Event 1976 -->
+            <div class="timeline-event timeline-event-right">
+                <div class="timeline-date">1976</div>
+                <div class="timeline-content">
+                    <h3>Junior College Started</h3>
+                    <ul>
+                        <li>Junior College started with 23 students.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Event 1983 -->
+            <div class="timeline-event timeline-event-left">
+                <div class="timeline-date">1983</div>
+                <div class="timeline-content">
+                    <h3>Undergraduate Courses Started</h3>
+                    <ul>
+                        <li>Bachelor's Degree courses started with 8 students enrolled in B.A, B.Com., and BSc program.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Event 2004 -->
+            <div class="timeline-event timeline-event-right">
+                <div class="timeline-date">2004</div>
+                <div class="timeline-content">
+                    <h3>Joined RUB</h3>
+                    <ul>
+                        <li>Sherubtse joins a host of other colleges to establish the Royal University of Bhutan.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Event 2006 -->
+            <div class="timeline-event timeline-event-left">
+                <div class="timeline-date">2006</div>
+                <div class="timeline-content">
+                    <h3>Started Degree Programmes</h3>
+                    <ul>
+                        <li>Sherubtse College started offering degree programmes under the Royal University of Bhutan in Arts/ Science/ Commerce.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Event 2008 -->
+            <div class="timeline-event timeline-event-right">
+                <div class="timeline-date">2008</div>
+                <div class="timeline-content">
+                    <h3>Introduced New Programmes</h3>
+                    <ul>
+                        <li>BSc in Math and Physics, BSc in Math and Chemistry, and BSc in Physics and Chemistry were introduced.</li>
+                        <li>The College established the Center for Population and Development Studies (CPDS).</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Event 2011 -->
+            <div class="timeline-event timeline-event-left">
+                <div class="timeline-date">2011</div>
+                <div class="timeline-content">
+                    <h3>Established a New Research Centre</h3>
+                    <ul>
+                        <li>Established Centre for Climate Change and Spatial Information (CCCSI).</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Event 2017 -->
+            <div class="timeline-event timeline-event-right">
+                <div class="timeline-date">2017</div>
+                <div class="timeline-content">
+                    <h3>Introduced New Programmes</h3>
+                    <ul>
+                        <li>BSc in Mathematics, BSc in Physics, and BSc in Chemistry were introduced.</li>
+                        <li>BA in Population and Development Studies programme was introduced as a single subject degree programme.</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Event 2021 -->
+            <div class="timeline-event timeline-event-left">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h3>Introduced New Programmes</h3>
+                    <ul>
+                        <li>BSc in Data Science and BSc in Statistics programmes were introduced in the Department of Mathematical Sciences.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </article>
+    <footer>
+        <div class="footer-content">
+            <section class="footer-logo-contact">
+                <img src="https://www.sherubtse.edu.bt/wp-content/uploads/elementor/thumbs/logo-removebg-preview-1-qg5devo52uwuyqukpeopqu2f6kqdtxid5uwrcbganc.png" alt="Sherubtse College Logo" style="width: 100px;">
+                <div class="footer-contact-info">
+                    <h3>Sherubtse College</h3>
+                    <p>Kanglung, Trashigang</p>
+                    <a href="mailto:ict.sherubtse@rub.edu.bt" style="color: white;">ict.sherubtse@rub.edu.bt</a><br>
+                    <p>Phone: +975-4-535128</p>
+                </div>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/Student-Handbook_2024-2025-1.pdf">Student Handbook</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Organogram-1.pdf">Organogram</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/The-Wheel-of-Academic-Law.pdf">Wheel of Academic</a></li>
+                    <li><a href="#">College Prospectus</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/01/Zhib-Tshol.pdf">Zhib Tshol</a></li>
+                    <li><a href="#">Tower Newsletter</a></li>
+                    <li><a href="#">College Magazine</a></li>
+                    <li><a href="Forms.html">Forms</a></li>
+                    <li><a href="https://www.sherubtse.edu.bt/wp-content/uploads/2024/07/RUB-Student-Code-of-Conduct-July-2022.pdf">Student Code of Conduct</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>E-Services</h4>
+                <ul>
+                    <li><a href="https://vle.sherubtse.edu.bt/">VLE</a></li>
+                    <li><a href="https://www.jstor.org/">JSTOR</a></li>
+                    <li><a href="https://ebookcentral.proquest.com/auth/lib/sherubtsebt/login.action?returnURL=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fsherubtsebt%2Fhome.action">ProQuest Ebook</a></li>
+                    <li><a href="#">Online Catalogue</a></li>
+                    <li><a href="https://ims.rub.edu.bt/public/auth/view-login">RUB IMS</a></li>
+                </ul>
+            </section>
+    
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Office of the Vice Chancellor</a></li>
+                    <li><a href="#">G2C Services</a></li>
+                    <li><a href="https://sites.google.com/view/sherubtselibrary?pli=1">Library</a></li>
+                    <li><a href="https://www.moice.gov.bt/">MoICE</a></li>
+                    <li><a href="https://www.rcsc.gov.bt/en/">RCSC</a></li>
+                </ul>
+            </section>
+        </div>
+        <!-- Social Media Links -->
+        <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.facebook.com/sherubtsecollege/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://x.com/i/flow/login?redirect_after_login=%2Fsherubtsecol" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.instagram.com/explore/locations/348824085312622/sherubtse-college-royal-university-of-bhutan/" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://bt.linkedin.com/company/sherubtse-college-bhutan" target="_blank" style="color: white; margin: 0 10px;">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        </div>
+    
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 10px; color: white;">
+        <p>COPYRIGHT © SHERUBTSE COLLEGE 2024</p>
+        </div>
+    </footer>
+  
+  <!-- Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
+  </body>
+</html>
